@@ -1,0 +1,24 @@
+{
+  "$schema": "https://bitbucket.org/atlassian/connect-schemas/raw/master/jira-global-schema.json",
+
+  "modules": {},
+  "key": "my-app-key",
+  "name": "My Connect App",
+  "description": "A connect app that does something",
+  "vendor": {
+    "name": "My Company",
+    "url": "http://www.example.com"
+  },
+
+  "baseUrl": "https://{{APP_HOST}}",
+  "authentication": {
+    "type": "jwt"
+  },
+
+  "lifecycle": {
+    "installed": "/api/installed",
+    "uninstalled": "/api/uninstalled"
+  },
+
+  "scopes": ["read", "write"]
+}
