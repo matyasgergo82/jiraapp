@@ -1,0 +1,43 @@
+{
+  "$schema": "https://bitbucket.org/atlassian/connect-schemas/raw/master/jira-global-schema.json",
+
+  "key": "org.everit.jira.jiraapp",
+  "name": "My Connect App",
+  "description": "A connect app that does something",
+
+  "vendor": {
+    "name": "EverIT Kft.",
+    "url": "http://www.everit.biz"
+  },
+
+  "baseUrl": "https://.",
+
+  "authentication": {
+    "type": "jwt"
+  },
+
+  "lifecycle": {
+    "installed": "/jira/installed",
+    "uninstalled": "/jira/uninstalled"
+  },
+
+  "scopes": ["read", "write"],
+
+  "modules": {
+    "generalPages": [
+      {
+        "key": "modules-general",
+        "location": "system.top.navigation.bar",
+        "name": {
+          "value": "My Connect App"
+        },
+        "url": "/jira/modules/general",
+        "icon": {
+          "width": 24,
+          "height": 22,
+          "url": "/favicon.ico"
+        }
+      }
+    ]
+  }
+}

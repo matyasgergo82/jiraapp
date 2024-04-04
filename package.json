@@ -10,8 +10,19 @@
     "postinstall": "nuxt prepare"
   },
   "dependencies": {
+    "@vercel/kv": "^1.0.1",
+    "aes-js": "^3.1.2",
+    "jose": "^5.2.3",
     "nuxt": "^3.11.1",
+    "pbkdf2": "^3.1.2",
     "vue": "^3.4.21",
     "vue-router": "^4.3.0"
+  },
+  "devDependencies": {
+    "@nuxtjs/eslint-config": "^12.0.0",
+    "@types/aes-js": "^3.1.4",
+    "@types/atlassian-connect-js": "^5.2.17",
+    "@types/pbkdf2": "^3.1.2",
+    "eslint": "^8.57.0"
   }
 }
