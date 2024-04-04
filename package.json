@@ -23,6 +23,8 @@
     "@types/aes-js": "^3.1.4",
     "@types/atlassian-connect-js": "^5.2.17",
     "@types/pbkdf2": "^3.1.2",
-    "eslint": "^8.57.0"
+    "eslint": "^8.57.0",
+    "typescript": "^5.4.3",
+    "vue-tsc": "^1.8.27"
   }
 }

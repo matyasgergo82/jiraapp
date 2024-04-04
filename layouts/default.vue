@@ -1,6 +1,4 @@
 <script setup lang="ts">
-import { useHead } from "@unhead/vue";
-
 useHead({
   meta: [{ charset: "utf-8" }, { name: "viewport", content: "width=device-width, initial-scale=1" }],
   link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }],
@@ -9,10 +7,15 @@ useHead({
     { innerHTML: "window.AP?.theming?.initializeTheming()" },
   ],
 });
-</script>
 
-<script lang="ts">
-if (window?.AP) {
+if (import.meta.browser) {
+  if (!AP.user?.getCurrentUser) {
+    throw createError({
+      statusCode: 401,
+      statusMessage: "Unauthorized! Not in Jira context!",
+      fatal: true,
+    });
+  }
   AP.sizeToParent(true);
 }
 </script>
